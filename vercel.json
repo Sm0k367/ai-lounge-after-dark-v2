@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "run.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    },
+    {
+      "src": "app/static/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "run.py"
+    },
+    {
+      "src": "/videos/(.*)",
+      "dest": "run.py"
+    },
+    {
+      "src": "/docs/(.*)",
+      "dest": "run.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "app/static/$1"
+    }
+  ],
+  "env": {
+    "FLASK_ENV": "production",
+    "HF_API_TOKEN": "@hf_api_token"
+    // Add other environment variables here, e.g., for Stripe, Intercom
+    // "STRIPE_SECRET_KEY": "@stripe_secret_key"
+  }
+}
