@@ -32,7 +32,5 @@
   "env": {
     "FLASK_ENV": "production",
     "HF_API_TOKEN": "@hf_api_token"
-    // Add other environment variables here, e.g., for Stripe, Intercom
-    // "STRIPE_SECRET_KEY": "@stripe_secret_key"
   }
 }
