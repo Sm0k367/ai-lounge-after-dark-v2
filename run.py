@@ -8,6 +8,7 @@ config_class = get_config()
 # Create the Flask application instance
 app = create_app(config_class)
 
+# The following code is for local development and will not be used on Vercel
 if __name__ == '__main__':
     # Ensure the videos directory exists
     videos_path = os.path.join(app.root_path, app.config['VIDEOS_FOLDER'])

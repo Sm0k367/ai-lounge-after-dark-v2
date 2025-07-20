@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "run.py",
+      "src": "app/main:app",
       "use": "@vercel/python",
       "config": {
         "maxLambdaSize": "15mb",
@@ -16,20 +16,12 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "run.py"
-    },
-    {
-      "src": "/videos/(.*)",
-      "dest": "run.py"
-    },
-    {
-      "src": "/docs/(.*)",
-      "dest": "run.py"
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "app/static/$1"
+      "dest": "app/main:app"
     }
   ],
   "env": {
