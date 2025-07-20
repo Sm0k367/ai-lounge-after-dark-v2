@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lounge After Dark - Image to Video Generator</title>
+    <meta name="description" content="AI Lounge After Dark: Generate stunning, dynamic videos from your images using advanced AI. Experience the future of content creation with a neon-cyberpunk aesthetic.">
+    <meta name="keywords" content="AI video generator, image to video, stable video diffusion, Hugging Face API, AI Lounge After Dark, cyberpunk, neon, content creation, AI tools, Epic Tech AIGent">
+    <meta name="author" content="Epic Tech AIGent">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ailoungeafterdark.com/"> <!-- Replace with actual URL -->
+    <meta property="og:title" content="AI Lounge After Dark - Image to Video Generator">
+    <meta property="og:description" content="Generate stunning, dynamic videos from your images using advanced AI. Experience the future of content creation with a neon-cyberpunk aesthetic.">
+    <meta property="og:image" content="https://www.ailoungeafterdark.com/social-preview.jpg"> <!-- Replace with actual image -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.ailoungeafterdark.com/"> <!-- Replace with actual URL -->
+    <meta property="twitter:title" content="AI Lounge After Dark - Image to Video Generator">
+    <meta property="twitter:description" content="Generate stunning, dynamic videos from your images using advanced AI. Experience the future of content creation with a neon-cyberpunk aesthetic.">
+    <meta property="twitter:image" content="https://www.ailoungeafterdark.com/social-preview.jpg"> <!-- Replace with actual image -->
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AI Lounge After Dark</h1>
+            <p class="tagline">Bridging Vision with Functional Reality</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="upload-section" class="card">
+            <h2>Generate Your Cybernetic Vision</h2>
+            <p>Upload an image and let our AI transform it into a dynamic video.</p>
+            <div class="upload-area">
+                <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                <button id="uploadButton" class="btn primary-btn">Upload Image</button>
+                <span id="fileName" class="file-name">No file chosen</span>
+            </div>
+            <button id="generateButton" class="btn secondary-btn" disabled>Generate Video</button>
+            <div id="status" class="status-message"></div>
+        </section>
+
+        <section id="video-section" class="card hidden">
+            <h2>Your Generated Video</h2>
+            <div class="video-player-container">
+                <video id="videoPlayer" controls loop muted autoplay></video>
+            </div>
+            <a id="downloadLink" class="btn tertiary-btn" download style="display: none;">Download Video</a>
+        </section>
+
+        <section id="about-section" class="card">
+            <h2>About AI Lounge After Dark</h2>
+            <p>Powered by Epic Tech AIGent, this application demonstrates the cutting-edge capabilities of AI in creative media. We utilize the `stabilityai/stable-video-diffusion-img2vid-xt` model from Hugging Face to bring your static images to life with fluid motion.</p>
+            <p>Our mission is to manifest revolutionary AI solutions that bridge the gap between conceptual vision and functional reality, delivering unparalleled experiences in the digital realm.</p>
+        </section>
+
+        <section id="contact-section" class="card">
+            <h2>Connect with Us</h2>
+            <p>Have questions or want to explore more AI possibilities? Reach out to Epic Tech AIGent.</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:contact@epictech.com">contact@epictech.com</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+                <li><strong>Intercom Chat:</strong> <span class="intercom-placeholder">Click the chat icon on the bottom right (if enabled)</span></li>
+            </ul>
+            <p>For business inquiries, partnerships, or custom AI solutions, please contact us directly.</p>
+        </section>
+
+        <section id="payment-section" class="card">
+            <h2>Pricing & Services</h2>
+            <p>Experience the full power of AI Lounge After Dark. Our flexible pricing plans are designed to meet your creative and business needs.</p>
+            <div class="stripe-placeholder">
+                <p><em>(Placeholder for Stripe payment integration. Future plans will include subscription models and pay-per-generation options.)</em></p>
+                <button class="btn primary-btn disabled-btn" disabled>View Plans (Coming Soon)</button>
+            </div>
+        </section>
+
+        <section id="documentation-section" class="card">
+            <h2>Documentation & Resources</h2>
+            <p>Dive deeper into the technology behind AI Lounge After Dark and Epic Tech AIGent.</p>
+            <ul>
+                <li><a href="/docs/AI_Lounge_After_Dark_Whitepaper.md" target="_blank">AI Lounge After Dark Whitepaper</a></li>
+                <li><a href="/docs/Epic_Tech_AIGent_Whitepaper.md" target="_blank">Epic Tech AIGent Whitepaper</a></li>
+                <li><a href="https://huggingface.co/docs/api-inference/index" target="_blank">Hugging Face Inference API Documentation</a></li>
+                <li><a href="https://flask.palletsprojects.com/en/latest/" target="_blank">Flask Web Framework Documentation</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AI Lounge After Dark by Epic Tech AIGent. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Service</a> | 
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
